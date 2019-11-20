@@ -46,7 +46,10 @@ function initializeLiffOrDie(myLiffId) {
 function initializeLiff(myLiffId) {
     liff
         .init({
-            liffId: myLiffId
+            liffId: myLiffId,
+            env: {
+               SERVER_END_POINT: "line-beta.me"
+            }
         })
         .then(() => {
             // start to use LIFF's api
